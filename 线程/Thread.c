@@ -6,7 +6,7 @@ int output();
 int main()
 {
     int status;
-    pthread_t pthread_id;
+    pthread_t pthread_id,pthread_id1;
     status=pthread_create(&pthread_id,NULL,output,NULL);
     if(status)
     {
@@ -16,7 +16,15 @@ int main()
     {
         printf("创建线程成功子线程的id为%u\n",pthread_id);
     }
-    
+    status=pthread_create(&pthread_id1,NULL,output,NULL);
+    if(status)
+    {
+        printf("创建线程1失败\n");
+    }
+    else
+    {
+        printf("创建线程1成功子线程的id为%u\n",pthread_id);
+    }
     while (i<2000)
     {
         printf("The father %d\n",i);
