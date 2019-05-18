@@ -16,7 +16,7 @@ int main()
     else
     {
         printf("创建线程成功子线程的id为%u\n",pthread_id);
-        status=pthread_join(pthread_id,NULL);
+        /*status=pthread_join(pthread_id,NULL);
         if(status)
         {
             printf("链接线程%u失败\n",pthread_id);
@@ -24,7 +24,7 @@ int main()
         else
         {
             printf("链接线程%u成功\n",pthread_id);
-        }
+        }*/
         
     }
     status=pthread_create(&pthread_id1,NULL,output,NULL);
@@ -35,7 +35,7 @@ int main()
     else
     {
         printf("创建线程1成功子线程的id为%u\n",pthread_id1);
-        status=pthread_join(pthread_id1,NULL);
+        /*status=pthread_join(pthread_id1,NULL);
         if(status)
         {
             printf("链接线程%u失败\n",pthread_id1);
@@ -43,12 +43,30 @@ int main()
         else
         {
             printf("链接线程%u成功\n",pthread_id1);
-        }
+        }*/
     }
     while (i<2000)
     {
         printf("The father %u %d\n",pthread_id2,i);
         i++;
+    }
+    status=pthread_join(pthread_id,NULL);
+    if(status)
+    {
+        printf("链接线程%u失败\n",pthread_id);
+    }
+    else
+    {
+        printf("链接线程%u成功\n",pthread_id);
+    }
+    status=pthread_join(pthread_id1,NULL);
+    if(status)
+    {
+        printf("链接线程%u失败\n",pthread_id1);
+    }
+    else
+    {
+        printf("链接线程%u成功\n",pthread_id1);
     }
     printf("主线程退出\n");
     return 0;
