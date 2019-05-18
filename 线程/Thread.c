@@ -14,7 +14,7 @@ int main()
     }
     else
     {
-        printf("创建线程成功子线程的id为%ld\n",status);
+        printf("创建线程成功子线程的id为%ld\n",pthread_id);
     }
     
     while (i<2000)
