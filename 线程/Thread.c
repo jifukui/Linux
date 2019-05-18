@@ -23,7 +23,7 @@ int main()
     }
     else
     {
-        printf("创建线程1成功子线程的id为%u\n",pthread_id);
+        printf("创建线程1成功子线程的id为%u\n",pthread_id1);
     }
     while (i<2000)
     {
