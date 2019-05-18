@@ -14,7 +14,7 @@ int main()
     }
     else
     {
-        printf("创建线程成功子线程的id为%ld\n",pthread_id);
+        printf("创建线程成功子线程的id为%u\n",pthread_id);
     }
     
     while (i<2000)
@@ -28,8 +28,8 @@ int main()
 int output()
 {
     pthread_t pthread_id;
-    printf("我的线程的id 为%ld,当前的全局变量的值为%d\n",pthread_id,i);
     pthread_id=pthread_self();
+    printf("我的线程的id 为%u,当前的全局变量的值为%d\n",pthread_id,i);
     while (i<2000)
     {
         printf("The thread %d\n",i);
