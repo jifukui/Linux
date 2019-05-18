@@ -16,6 +16,16 @@ int main()
     else
     {
         printf("创建线程成功子线程的id为%u\n",pthread_id);
+        status=pthread_join(pthread_id,NULL);
+        if(status)
+        {
+            printf("链接线程%u失败\n",pthread_id);
+        }
+        else
+        {
+            printf("链接线程%u成功\n",pthread_id);
+        }
+        
     }
     status=pthread_create(&pthread_id1,NULL,output,NULL);
     if(status)
@@ -25,6 +35,15 @@ int main()
     else
     {
         printf("创建线程1成功子线程的id为%u\n",pthread_id1);
+        status=pthread_join(pthread_id1,NULL);
+        if(status)
+        {
+            printf("链接线程%u失败\n",pthread_id1);
+        }
+        else
+        {
+            printf("链接线程%u成功\n",pthread_id1);
+        }
     }
     while (i<2000)
     {
