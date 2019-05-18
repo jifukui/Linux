@@ -80,6 +80,6 @@ int output()
         printf("The thread %u %d\n",pthread_id,i);
         i++;
     }
-    printf("子线程退出\n");
+    printf("子线程%u退出\n",pthread_id);
     return 0;
 }
