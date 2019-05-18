@@ -7,7 +7,7 @@ int main()
 {
     int status;
     pthread_t pthread_id;
-    status=pthread_creat(&pthread_id,NULL,output,NULL);
+    status=pthread_create(&pthread_id,NULL,output,NULL);
     if(status)
     {
         printf("创建线程失败\n");
