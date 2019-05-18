@@ -20,6 +20,7 @@ int main()
     while (i<200)
     {
         printf("The father %d\n",i);
+        i++;
     }
     return 0;
 }
@@ -28,6 +29,7 @@ int output()
     while (i<200)
     {
         printf("The thread %d\n",i);
+        i++;
     }
     return 0;
 }
