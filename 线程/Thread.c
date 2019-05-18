@@ -17,7 +17,7 @@ int main()
         printf("创建线程成功\n");
     }
     
-    while (i<200)
+    while (i<2000)
     {
         printf("The father %d\n",i);
         i++;
@@ -26,7 +26,7 @@ int main()
 }
 int output()
 {
-    while (i<200)
+    while (i<2000)
     {
         printf("The thread %d\n",i);
         i++;
