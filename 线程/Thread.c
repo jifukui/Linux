@@ -6,7 +6,8 @@ int output();
 int main()
 {
     int status;
-    pthread_t pthread_id,pthread_id1;
+    pthread_t pthread_id,pthread_id1,pthread_id2;
+    pthread_id2=pthread_self();
     status=pthread_create(&pthread_id,NULL,output,NULL);
     if(status)
     {
@@ -27,7 +28,7 @@ int main()
     }
     while (i<2000)
     {
-        printf("The father %d\n",i);
+        printf("The father %u %d\n",pthread_id2,i);
         i++;
     }
     printf("主线程退出\n");
@@ -40,7 +41,7 @@ int output()
     printf("我的线程的id 为%u,当前的全局变量的值为%d\n",pthread_id,i);
     while (i<2000)
     {
-        printf("The thread %d\n",i);
+        printf("The thread %u %d\n",pthread_id,i);
         i++;
     }
     printf("子线程退出\n");
