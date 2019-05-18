@@ -67,7 +67,6 @@ int main()
         printf("The father %u %d\n",pthread_id2,i);
         i++;
     }
-    
     printf("主线程退出\n");
     return 0;
 }
