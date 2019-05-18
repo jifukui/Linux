@@ -14,7 +14,7 @@ int main()
     }
     else
     {
-        printf("创建线程成功子线程的id为%ld\n",pthread_id);
+        printf("创建线程成功子线程的id为%ld\n",status);
     }
     
     while (i<2000)
@@ -22,6 +22,7 @@ int main()
         printf("The father %d\n",i);
         i++;
     }
+    printf("主线程退出\n");
     return 0;
 }
 int output()
@@ -34,5 +35,6 @@ int output()
         printf("The thread %d\n",i);
         i++;
     }
+    printf("子线程退出\n");
     return 0;
 }
