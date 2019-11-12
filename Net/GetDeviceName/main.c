@@ -9,7 +9,7 @@ int main(int argc,char**argv)
     struct hostent *h;
     if(argc!=2)
     {
-        fprintf(stderr,"Usage :getip address\n");
+        printf("Usage :getip address\n");
         exit(1);
     }
     if(h=gethostbyname(argv[1])==NULL)
