@@ -10,7 +10,7 @@ int main(int argc,char**argv)
     if(argc!=2)
     {
         fprintf(stderr,"Usage :getip address\n");
-        extit(1);
+        exit(1);
     }
     if(h=gethostbyname(argv[1])==NULL)
     {
