@@ -7,10 +7,11 @@
 int main(int argc,char**argv)
 {
     struct hostent *h;
+    printf("The input is %d\n",argc);
     if(argc!=2)
     {
         printf("Usage :getip address\n");
-        exit(1);
+        return 0;
     }
     if(h=gethostbyname(argv[1])==NULL)
     {
