@@ -12,7 +12,7 @@ int main(int argc ,char **argv)
     {
         err_sys("cann't open %s\n",argv[1]);
     }
-    while ((dirp=readdie(dp)!=NULL))
+    while ((dirp=readdir(dp)!=NULL))
     {
         printf("%s\n",dirp->d_name);
     }
