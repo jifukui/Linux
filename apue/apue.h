@@ -28,4 +28,12 @@
     long open_max(void);
     int set_cloexec(int);
     void clr_fl(int,int);
+
+    void err_msg(const char *fmt,...);
+    void err_dump(const char *fmt,...);
+    void err_quit(const char *fmt,...);
+    void err_cont(int error,const char *fmt,...);
+    void err_exit(int error,const char *fmt,...);
+    void err_ret(const char *fmt,...);
+    void err_sys(const char* fmt,...);
 #endif
