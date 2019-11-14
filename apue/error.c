@@ -56,7 +56,7 @@ void err_quit(const char *fmt,...)
     va_end(ap);
     exit(1);
 }
-static void err_doit(int errorflag,int error,const char *fmt,...)
+static void err_doit(int errorflag,int error,const char *fmt,va_list ap)
 {
     char buf[MAXLINE];
     vsnprintf(buf,MAXLINE-1,fmt,ap);
