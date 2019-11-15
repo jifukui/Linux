@@ -20,7 +20,7 @@ int main(int argc,char **argv)
         {
             ptr="directory";
         }
-        else if(S_ISCHAR(buf.st_mode))
+        else if(S_ISCHR(buf.st_mode))
         {
             ptr="character special";
         }
