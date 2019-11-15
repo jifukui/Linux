@@ -38,7 +38,7 @@ int main(int argc,char **argv)
         }
         else if(S_ISSOCK(buf.st_mode))
         {
-             ptr="socket"
+             ptr="socket";
         }
         else
         {
