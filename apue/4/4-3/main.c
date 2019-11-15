@@ -6,7 +6,7 @@ int main(int argc,char **argv)
     char *ptr;
     for(i=1;i<argc;i++)
     {
-        printf("%s: \n",argv[1]);
+        printf("%s: \n",argv[i]);
         if(lstat(argv[i],&buf)<0)
         {
             err_ret("lstat error\n");
@@ -44,6 +44,7 @@ int main(int argc,char **argv)
         {
             ptr="unknow";
         }
+        printf("%s\n",ptr);
     }
     exit(0);
 }
