@@ -26,3 +26,6 @@ static void my_exit2(void)
 {
     printf("second exit handler\n");
 }
+/**atexit函数用于登记函数，
+ * 当函数退出的时候调用登记的函数执行顺序与登记顺序相反
+ * *
