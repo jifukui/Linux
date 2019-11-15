@@ -8,11 +8,15 @@ int main(int argc ,char **argv)
     {
         err_quit("usage:ls directory_name\n");
     }
-    if((dp=opendir(argv[1]!=NULL)))
+    if((dp=opendir(argv[1]))==NULL)
     {
         err_sys("cann't open %s\n",argv[1]);
     }
-    while ((dirp=readdir(dp)!=NULL))
+	else
+	{
+		printf("open dir success\n");
+	}
+    while ((dirp=readdir(dp))!=NULL)
     {
         printf("%s\n",dirp->d_name);
     }
