@@ -55,10 +55,12 @@ int main()
 {
 	//extern int errno;
 	key_t semid;
+	key_t key;
+	key=ftok(".",1);
 	errno=0;
     int err=0; 
-	semid=binary_semaphore_allocation(1,IPC_CREAT |0666);
-	printf("father is %d semid is %d\n",getpid(),(int)semid);
+	semid=binary_semaphore_allocation(key,IPC_CREAT |0666);
+	printf("father is %d semid is %d key is %d\n",getpid(),(int)semid,(int)key);
     if(semid==-1)
     {
         printf("error of greated %d %s\n",errno,strerror(errno));
