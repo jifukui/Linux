@@ -48,6 +48,7 @@ int binary_semaphore_post(int semid)
     operations[0].sem_op=1;
     operations[0].sem_flg=SEM_UNDO;
     printf("process is %d\n",(int)getpid());
+	sleep(1);
     return semop(semid,operations,1);
 }
 int main()
