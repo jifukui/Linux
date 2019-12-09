@@ -5,7 +5,7 @@ struct data
     char value;
     int count;
 };
-void * char cprint(void *value)
+void *  cprint(void *value)
 {
     struct data *p=(struct data *)value;
     int i;
