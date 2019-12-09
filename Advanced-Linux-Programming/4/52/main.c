@@ -23,8 +23,8 @@ int main()
     struct data thd2;
     thd1.value='x';
     thd1.count=30000;
-    pthread_ctreate(&th1,NULL,&cprint,&thd1);
+    pthread_create(&th1,NULL,&cprint,&thd1);
     thd2.value='o';
     thd2.count=20000;
-    pthread_ctreate(&th2,NULL,&cprint,&thd2);
+    pthread_create(&th2,NULL,&cprint,&thd2);
 }
