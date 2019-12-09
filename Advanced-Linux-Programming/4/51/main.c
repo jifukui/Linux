@@ -4,7 +4,7 @@ void * print_xs(void * unused)
 {
     while (1)
     {
-        fputc("x\n",stderr);
+        fputc('x',stderr);
     }
     return NULL;   
 }
@@ -14,7 +14,7 @@ int main()
     pthread_create(&thread_id,NULL,*print_xs,NULL);
     while (1)
     {
-        fputc("o\n",stderr);
+        fputc('o',stderr);
     }
     return 0;
 }
