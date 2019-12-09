@@ -27,4 +27,6 @@ int main()
     thd2.value='o';
     thd2.count=20000;
     pthread_create(&th2,NULL,&cprint,&thd2);
+    pthread_join(th1,NULL);
+    pthread_join(th2,NULL);
 }
