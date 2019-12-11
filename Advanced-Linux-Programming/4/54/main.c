@@ -4,7 +4,7 @@ void *compute(void *arg)
 {
     int cand=2;
     printf("the arg is %x\n",arg);
-    printf("the *arg is %d\n",(int *)arg);
+    printf("the *arg is %x\n",(int *)arg);
     printf("the n is %d\n",*((int*)arg));
     int n=*((int*)arg);
     while (1)
